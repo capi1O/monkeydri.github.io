@@ -13,6 +13,21 @@
     
     <item>
       <title>Seafile HTTPS nginx reverse-proxy</title>
+      <link>https://monkeydri.github.io/posts/docker-https-nginx-reverse-proxy/</link>
+      <pubDate>Fri, 18 May 2018 13:34:31 +0200</pubDate>
+      
+      <guid>https://monkeydri.github.io/posts/docker-https-nginx-reverse-proxy/</guid>
+      <description>https://blog.linuxserver.io/2017/11/28/how-to-setup-a-reverse-proxy-with-letsencrypt-ssl-for-all-your-docker-apps/ based on https://github.com/linuxserver/docker-letsencrypt
+exemples de nginx config pour reverse nginx https://gist.github.com/IronicBadger/362c408d1f2c27a0503cb9252b508140
+&amp;mdash; autre methodes pour nginx reverse-proxy
+https://tech.acseo.co/sites-https-docker-nginx-lets-encrypt/
+link docker containers in docker-compose to same network docker network create
+version: &#39;2&#39; services: seafile: image: some/image:1.2.3 container_name: some-name restart: unless-stopped ports: - &amp;quot;9080:80&amp;quot; volumes: - some-vol:/etc/path/to/somewhere networks: - some-network volumes: some-vol: driver: local networks: some-network: external: true  source : https://forums.docker.com/t/set-default-network-name-for-compose/36779/2
+docker container will be accessible by other containers on network some-network via DNS name some-name</description>
+    </item>
+    
+    <item>
+      <title>Seafile HTTPS nginx reverse-proxy</title>
       <link>https://monkeydri.github.io/posts/seafile-https-nginx-reverse-proxy/</link>
       <pubDate>Fri, 18 May 2018 13:34:31 +0200</pubDate>
       
@@ -21,6 +36,15 @@
 location /seafile { proxy_pass	http://seafile; proxy_set_header	Host $host; proxy_set_header	Forwarded &amp;quot;for=$remote_addr;proto=$scheme&amp;quot;; proxy_set_header	X-Forwarded-For $remote_addr; proxy_set_header	X-Forwarded-Proto $scheme; proxy_set_header	X-Real-IP $remote_addr; proxy_set_header	Connection &amp;quot;&amp;quot;; proxy_http_version	1.1; proxy_set_header	X-Forwarded-Proto https; proxy_read_timeout 1200s; access_log /var/log/nginx/seafile-access.log; error_log /var/log/nginx/seafile-error.log; }  source : https://forum.seafile.com/t/solved-using-nginx-reverse-proxy-for-seafile-docker/6109/7 &amp;amp; https://manual.seafile.com/deploy/https_with_nginx.html
 config for non root domain ie. domain.com/seafile set SEAFILE_URL to https://domain.com/seafile in docker-compose.yml.
 In additions to the /seafile block in main nginx config, we need to modify settings_seahub.</description>
+    </item>
+    
+    <item>
+      <title>seafile-webdav</title>
+      <link>https://monkeydri.github.io/posts/seafile-webdav/</link>
+      <pubDate>Fri, 18 May 2018 13:34:31 +0200</pubDate>
+      
+      <guid>https://monkeydri.github.io/posts/seafile-webdav/</guid>
+      <description>https://manual.seafile.com/extension/webdav.html https://forum.seafile.com/t/how-to-access-file-through-webdav/3999/4 with or without fast-cgi https://forum.seafile.com/t/seafile-with-nginx-and-fast-cgi/373 https://forum.seafile.com/t/unable-to-connect-to-webdav-of-seafile-server-6-0-6-using-nginx-https-and-mysql-running-on-ubuntu-server-16-04-1-lts/1386</description>
     </item>
     
   </channel>

@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://monkeydri.github.io/posts/docker-https-nginx-reverse-proxy/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://monkeydri.github.io/posts/seafile-https-nginx-reverse-proxy/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/posts/seafile-webdav/</loc>
     <lastmod>2018-05-18T13:34:31+02:00</lastmod>
   </url>
   
