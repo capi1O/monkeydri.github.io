@@ -3,17 +3,70 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://monkeydri.github.io/posts/seafile-https-nginx-reverse-proxy/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/authors/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://monkeydri.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://monkeydri.github.io/tags/docker/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/nginx/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/posts/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/reverse-proxy/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/seafile/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/categories/server/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -4,21 +4,25 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='monkeydri blog'>
+<meta name='description' content='config for root domain ie. seafile.domain.com set SEAFILE_URL to https://seafile.domain.com in docker-compose.yml.
+location /seafile { proxy_pass	http://seafile; proxy_set_header	Host $host; proxy_set_header	Forwarded &quot;for=$remote_addr;proto=$scheme&quot;; proxy_set_header	X-Forwarded-For $remote_addr; proxy_set_header	X-Forwarded-Proto $scheme; proxy_set_header	X-Real-IP $remote_addr; proxy_set_header	Connection &quot;&quot;; proxy_http_version	1.1; proxy_set_header	X-Forwarded-Proto https; proxy_read_timeout 1200s; access_log /var/log/nginx/seafile-access.log; error_log /var/log/nginx/seafile-error.log; }  source : https://forum.seafile.com/t/solved-using-nginx-reverse-proxy-for-seafile-docker/6109/7 &amp; https://manual.seafile.com/deploy/https_with_nginx.html
+config for non root domain ie. domain.com/seafile set SEAFILE_URL to https://domain.com/seafile in docker-compose.yml.
+In additions to the /seafile block in main nginx config, we need to modify settings_seahub.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='monkeydri blog'>
-<meta property='og:description' content='monkeydri blog'>
-<meta property='og:url' content='https://monkeydri.github.io/'>
+<meta property='og:title' content='Seafile HTTPS nginx reverse-proxy • monkeydri blog'>
+<meta property='og:description' content='config for root domain ie. seafile.domain.com set SEAFILE_URL to https://seafile.domain.com in docker-compose.yml.
+location /seafile { proxy_pass	http://seafile; proxy_set_header	Host $host; proxy_set_header	Forwarded &quot;for=$remote_addr;proto=$scheme&quot;; proxy_set_header	X-Forwarded-For $remote_addr; proxy_set_header	X-Forwarded-Proto $scheme; proxy_set_header	X-Real-IP $remote_addr; proxy_set_header	Connection &quot;&quot;; proxy_http_version	1.1; proxy_set_header	X-Forwarded-Proto https; proxy_read_timeout 1200s; access_log /var/log/nginx/seafile-access.log; error_log /var/log/nginx/seafile-error.log; }  source : https://forum.seafile.com/t/solved-using-nginx-reverse-proxy-for-seafile-docker/6109/7 &amp; https://manual.seafile.com/deploy/https_with_nginx.html
+config for non root domain ie. domain.com/seafile set SEAFILE_URL to https://domain.com/seafile in docker-compose.yml.
+In additions to the /seafile block in main nginx config, we need to modify settings_seahub.'>
+<meta property='og:url' content='https://monkeydri.github.io/posts/seafile-https-nginx-reverse-proxy/'>
 <meta property='og:site_name' content='monkeydri blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2018-05-18T13:34:31&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:tag' content='docker'><meta property='article:tag' content='seafile'><meta property='article:tag' content='nginx'><meta property='article:tag' content='reverse-proxy'><meta property='article:published_time' content='2018-05-18T13:34:31&#43;02:00'/><meta property='article:modified_time' content='2018-05-18T13:34:31&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.40.1" />
 
-  <title>monkeydri blog</title>
-  <link rel='canonical' href='https://monkeydri.github.io/'>
-  
-    <link href="https://monkeydri.github.io/index.xml" rel="alternate" type="application/rss+xml" title="monkeydri blog" />
+  <title>Seafile HTTPS nginx reverse-proxy • monkeydri blog</title>
+  <link rel='canonical' href='https://monkeydri.github.io/posts/seafile-https-nginx-reverse-proxy/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -29,7 +33,7 @@
 </head>
 
 
-<body class='home type-page has-sidebar'>
+<body class='page type-posts has-sidebar'>
 
   <div class='site'>
 
@@ -110,7 +114,7 @@
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
-          <div class='header-info'><h1 class='site-title title'>monkeydri blog</h1><p class='desc site-desc'>monkeydri blog</p>
+          <div class='header-info'><p class='site-title title'>monkeydri blog</p><p class='desc site-desc'>monkeydri blog</p>
           </div>
         </div>
       </header>
@@ -118,34 +122,170 @@
       <main id='content'>
 
 
-<div class='home-widgets'>
-  <div class='container sep-before'><section class='widget widget-recent_posts sep-after'>
-  <header>
-    <h4 class='title widget-title'>Recent Posts</h4>
-  </header>
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Seafile HTTPS nginx reverse-proxy</h1>
+      
 
-  <ul class='list'>
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
-    <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>Posted on </span>
-  <time datetime='2018-05-18T13:34:31&#43;02:00'>18 May 2018</time>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-05-18T13:34:31&#43;02:00'>18 May 2018</time>
 </span>
 
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
   </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/posts/seafile-https-nginx-reverse-proxy/'>Seafile HTTPS nginx reverse-proxy</a>
-    </h3>
-  </header>
-</li>
+</header>
 
   
-  </ul>
-</section>
+  
+
+  <div class='container entry-content'>
+  
+
+<h1 id="config-for-root-domain-ie-seafile-domain-com">config for root domain ie. seafile.domain.com</h1>
+
+<p>set <code>SEAFILE_URL</code> to <code>https://seafile.domain.com</code> in <code>docker-compose.yml</code>.</p>
+
+<pre><code>location /seafile {
+	proxy_pass					http://seafile;
+	proxy_set_header		Host $host;
+	proxy_set_header		Forwarded &quot;for=$remote_addr;proto=$scheme&quot;;
+	proxy_set_header		X-Forwarded-For $remote_addr;
+	proxy_set_header		X-Forwarded-Proto $scheme;
+	proxy_set_header		X-Real-IP $remote_addr;
+	proxy_set_header		Connection &quot;&quot;;
+	proxy_http_version	1.1;
+	proxy_set_header		X-Forwarded-Proto https;
+	proxy_read_timeout  1200s;
+
+	access_log /var/log/nginx/seafile-access.log;
+	error_log /var/log/nginx/seafile-error.log;
+}
+</code></pre>
+
+<p>source : <a href="https://forum.seafile.com/t/solved-using-nginx-reverse-proxy-for-seafile-docker/6109/7" target="_blank">https://forum.seafile.com/t/solved-using-nginx-reverse-proxy-for-seafile-docker/6109/7</a> &amp; <a href="https://manual.seafile.com/deploy/https_with_nginx.html" target="_blank">https://manual.seafile.com/deploy/https_with_nginx.html</a></p>
+
+<h1 id="config-for-non-root-domain-ie-domain-com-seafile">config for non root domain ie. domain.com/seafile</h1>
+
+<p>set <code>SEAFILE_URL</code> to <code>https://domain.com/seafile</code> in <code>docker-compose.yml</code>.</p>
+
+<p>In additions to the /seafile block in main nginx config, we need to modify <code>settings_seahub.py</code>, but after setup.</p>
+
+<p>launch &amp; setup seafile docker <code>dcu -d</code>, get MySQL root random password from logs <code>docker-compose seafile logs</code> and <code>dce seafile setup</code></p>
+
+<p>copy the contents of <code>settings_seahub.py</code> : <code>dce seafile bash</code>, <code>cat /seafile/conf/seahub_settings.py</code></p>
+
+<p>create a file <code>settings_seahub.py</code> on host with its content and additional settings :</p>
+
+<pre><code>SERVE_STATIC = False
+MEDIA_URL = '/seafile/seafmedia/'
+COMPRESS_URL = MEDIA_URL
+STATIC_URL = MEDIA_URL + 'assets/'
+SITE_ROOT = '/seafile/'
+LOGIN_URL = '/seafile/accounts/login/'
+</code></pre>
+
+<p>mount it add <code>- /var/docker/seafile-docker-foxel/seahub_settings.py:/seafile/conf/seahub_settings.py</code> to <code>volumes</code> sections of <code>docker-compose.yml</code></p>
+
+<p>then modify seafile internal nginx config</p>
+
+<p>copy the contents of seafile internal nginx config <code>seafile.conf</code> : <code>dce seafile bash</code>, <code>cat /etc/nginx/sites-available/seafile.conf</code></p>
+
+<p>create a file <code>nginx-seafile.conf</code> on host with its content and modify it :</p>
+
+<p>enable HTTPS in main block fast_cgi :</p>
+
+<pre><code>location / {
+		...
+		fastcgi_param   HTTPS               on;
+		fastcgi_param   HTTP_SCHEME         https;
+		...
+}
+</code></pre>
+
+<p>replace media block :</p>
+
+<pre><code>location /seafile/seafmedia {
+		rewrite ^/seafile/seafmedia(.*)$ /media$1 break;
+		root /opt/seafile/latest/seahub;
+}
+</code></pre>
+
+<p>mount it add <code>- /var/docker/seafile-docker-foxel/nginx-seafile.conf:/etc/nginx/sites-available/seafile.conf</code> to <code>volumes</code> sections of <code>docker-compose.yml</code></p>
+
+<p>source : <a href="https://manual.seafile.com/deploy/deploy_seahub_at_non-root_domain.html" target="_blank">https://manual.seafile.com/deploy/deploy_seahub_at_non-root_domain.html</a></p>
+
+<p>relaunch docker <code>dcs &amp;&amp; dcu -d</code> (<code>dcr</code> will not add new mounts)</p>
+
+<h2 id="bug-images-are-not-displayed">bug : images are not displayed</h2>
+
+<p>When performing those operations on an existing seafile setup, images will not be displayed. This is because seafile&rsquo;s cache.</p>
+
+<p>ex avatar URL is <a href="https://domain.com/seafmedia/avatars/default.png" target="_blank">https://domain.com/seafmedia/avatars/default.png</a> instead of <a href="https://domain.com/seafile/seafmedia/avatars/default.png" target="_blank">https://domain.com/seafile/seafmedia/avatars/default.png</a>.</p>
+
+<p>cache needs to be reset : <code>dce seafile bash</code>, <code>rm -rf /tmp/seahub_cache/</code></p>
+
+<p>source : <a href="https://github.com/haiwen/seahub/issues/1988" target="_blank">https://github.com/haiwen/seahub/issues/1988</a></p>
+
 </div>
-</div>      </main>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='categories'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/server'>Server</a></div>
+<div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/docker'>Docker</a>, <a class='tag' href='/tags/seafile'>Seafile</a>, <a class='tag' href='/tags/nginx'>Nginx</a>, <a class='tag' href='/tags/reverse-proxy'>Reverse-proxy</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+      </main>
 
       <footer id='footer' class='footer'>
         <div class='container sep-before'>

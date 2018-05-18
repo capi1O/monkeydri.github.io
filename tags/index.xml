@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Site</title>
-    <link>http://example.org/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <title>Tags on monkeydri blog</title>
+    <link>https://monkeydri.github.io/tags/</link>
+    <description>Recent content in Tags on monkeydri blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 18 May 2018 13:34:31 +0200</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://monkeydri.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker</title>
+      <link>https://monkeydri.github.io/tags/docker/</link>
+      <pubDate>Fri, 18 May 2018 13:34:31 +0200</pubDate>
+      
+      <guid>https://monkeydri.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://monkeydri.github.io/tags/nginx/</link>
+      <pubDate>Fri, 18 May 2018 13:34:31 +0200</pubDate>
+      
+      <guid>https://monkeydri.github.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reverse-proxy</title>
+      <link>https://monkeydri.github.io/tags/reverse-proxy/</link>
+      <pubDate>Fri, 18 May 2018 13:34:31 +0200</pubDate>
+      
+      <guid>https://monkeydri.github.io/tags/reverse-proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seafile</title>
+      <link>https://monkeydri.github.io/tags/seafile/</link>
+      <pubDate>Fri, 18 May 2018 13:34:31 +0200</pubDate>
+      
+      <guid>https://monkeydri.github.io/tags/seafile/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
