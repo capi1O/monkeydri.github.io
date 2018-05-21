@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Seafile HTTPS nginx reverse-proxy</title>
+      <title>Docker HTTPS nginx reverse-proxy</title>
       <link>https://monkeydri.github.io/posts/docker-https-nginx-reverse-proxy/</link>
       <pubDate>Fri, 18 May 2018 13:34:31 +0200</pubDate>
       
