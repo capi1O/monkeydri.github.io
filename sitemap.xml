@@ -13,8 +13,25 @@
   </url>
   
   <url>
+    <loc>https://monkeydri.github.io/posts/virtual-machine-compatibility/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://monkeydri.github.io/posts/seafile-webdav/</loc>
     <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/after-effects/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/altium-designer/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -28,7 +45,19 @@
   </url>
   
   <url>
+    <loc>https://monkeydri.github.io/tags/directx/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://monkeydri.github.io/tags/docker/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/illutrator/</loc>
     <lastmod>2018-05-18T13:34:31+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -40,7 +69,19 @@
   </url>
   
   <url>
+    <loc>https://monkeydri.github.io/tags/photoshop/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://monkeydri.github.io/posts/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/premiere/</loc>
     <lastmod>2018-05-18T13:34:31+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -69,7 +110,31 @@
   </url>
   
   <url>
+    <loc>https://monkeydri.github.io/tags/solidworks/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://monkeydri.github.io/tags/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/categories/virtual-machine/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/virtualbox/</loc>
+    <lastmod>2018-05-18T13:34:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://monkeydri.github.io/tags/vmware/</loc>
     <lastmod>2018-05-18T13:34:31+02:00</lastmod>
     <priority>0</priority>
   </url>

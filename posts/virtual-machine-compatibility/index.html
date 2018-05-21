@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='https://www.eevblog.com/forum/altium/will-altium-17-run-in-virtualbox-or-vmware-on-a-linux-host/
+solidworks PCB keeps opening new instance rather than open PCBdoc inside : https://forum.solidworks.com/thread/28754#128290
+Vmware 3D acceleration support for intel HD graphics on ubuntu needs to add line to either ~/.vmware/preferences.ini or to the vmx fie itself :
+mks.gl.allowBlacklistedDrivers = &quot;TRUE&quot; source : https://ubuntuforums.org/showthread.php?t=2368057 &amp; https://askubuntu.com/questions/537787/enable-3d-hw-acceleration-on-vmware-workstation-10-on-ubuntu-14-04
+altium 18 on virtualbox requires DirectX 10 :
+ This version of Altium Designer&rsquo;s PCB editor has been optimized for use with DirectX 10, and requires a graphics card that supports this'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Virtual Machine Compatibility • monkeydri blog'>
+<meta property='og:description' content='https://www.eevblog.com/forum/altium/will-altium-17-run-in-virtualbox-or-vmware-on-a-linux-host/
+solidworks PCB keeps opening new instance rather than open PCBdoc inside : https://forum.solidworks.com/thread/28754#128290
+Vmware 3D acceleration support for intel HD graphics on ubuntu needs to add line to either ~/.vmware/preferences.ini or to the vmx fie itself :
+mks.gl.allowBlacklistedDrivers = &quot;TRUE&quot; source : https://ubuntuforums.org/showthread.php?t=2368057 &amp; https://askubuntu.com/questions/537787/enable-3d-hw-acceleration-on-vmware-workstation-10-on-ubuntu-14-04
+altium 18 on virtualbox requires DirectX 10 :
+ This version of Altium Designer&rsquo;s PCB editor has been optimized for use with DirectX 10, and requires a graphics card that supports this'>
+<meta property='og:url' content='https://monkeydri.github.io/posts/virtual-machine-compatibility/'>
+<meta property='og:site_name' content='monkeydri blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:tag' content='vmware'><meta property='article:tag' content='virtualbox'><meta property='article:tag' content='altium-designer'><meta property='article:tag' content='solidworks'><meta property='article:tag' content='photoshop'><meta property='article:tag' content='premiere'><meta property='article:tag' content='after-effects'><meta property='article:tag' content='illutrator'><meta property='article:tag' content='directx'><meta property='article:published_time' content='2018-05-18T13:34:31&#43;02:00'/><meta property='article:modified_time' content='2018-05-18T13:34:31&#43;02:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.40.1" />
+
+  <title>Virtual Machine Compatibility • monkeydri blog</title>
+  <link rel='canonical' href='https://monkeydri.github.io/posts/virtual-machine-compatibility/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.67e9c12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+</head>
+
+
+<body class='page type-posts has-sidebar'>
+
+  <div class='site'>
+
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    monkeydri blog
+    </h2>
+    <div class='desc'>
+    monkeydri blog
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/after-effects' style='font-size:1em'>After-effects</a>
+      </li><li>
+        <a href='/tags/altium-designer' style='font-size:1em'>Altium-designer</a>
+      </li><li>
+        <a href='/tags/directx' style='font-size:1em'>Directx</a>
+      </li><li>
+        <a href='/tags/docker' style='font-size:2em'>Docker</a>
+      </li><li>
+        <a href='/tags/illutrator' style='font-size:1em'>Illutrator</a>
+      </li><li>
+        <a href='/tags/nginx' style='font-size:2em'>Nginx</a>
+      </li><li>
+        <a href='/tags/photoshop' style='font-size:1em'>Photoshop</a>
+      </li><li>
+        <a href='/tags/premiere' style='font-size:1em'>Premiere</a>
+      </li><li>
+        <a href='/tags/reverse-proxy' style='font-size:2em'>Reverse-proxy</a>
+      </li><li>
+        <a href='/tags/seafile' style='font-size:2em'>Seafile</a>
+      </li><li>
+        <a href='/tags/solidworks' style='font-size:1em'>Solidworks</a>
+      </li><li>
+        <a href='/tags/virtualbox' style='font-size:1em'>Virtualbox</a>
+      </li><li>
+        <a href='/tags/vmware' style='font-size:1em'>Vmware</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='https://github.com/monkeydri/monkeydri-blog'>Repo</a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>monkeydri blog</p><p class='desc site-desc'>monkeydri blog</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Virtual Machine Compatibility</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-05-18T13:34:31&#43;02:00'>18 May 2018</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p><a href="https://www.eevblog.com/forum/altium/will-altium-17-run-in-virtualbox-or-vmware-on-a-linux-host/" target="_blank">https://www.eevblog.com/forum/altium/will-altium-17-run-in-virtualbox-or-vmware-on-a-linux-host/</a></p>
+
+<p>solidworks PCB keeps opening new instance rather than open PCBdoc inside : <a href="https://forum.solidworks.com/thread/28754#128290" target="_blank">https://forum.solidworks.com/thread/28754#128290</a></p>
+
+<h1 id="vmware-3d-acceleration-support-for-intel-hd-graphics-on-ubuntu">Vmware 3D acceleration support for intel HD graphics on ubuntu</h1>
+
+<p>needs to add line to either ~/.vmware/preferences.ini or to the <code>vmx</code> fie itself :</p>
+
+<p><code>mks.gl.allowBlacklistedDrivers = &quot;TRUE&quot;</code>
+source : <a href="https://ubuntuforums.org/showthread.php?t=2368057" target="_blank">https://ubuntuforums.org/showthread.php?t=2368057</a> &amp; <a href="https://askubuntu.com/questions/537787/enable-3d-hw-acceleration-on-vmware-workstation-10-on-ubuntu-14-04" target="_blank">https://askubuntu.com/questions/537787/enable-3d-hw-acceleration-on-vmware-workstation-10-on-ubuntu-14-04</a></p>
+
+<p>altium 18 on virtualbox requires DirectX 10 :</p>
+
+<blockquote>
+<p>This version of Altium Designer&rsquo;s PCB editor has been optimized for use with DirectX 10, and requires a graphics card that supports this</p>
+</blockquote>
+
+<p>source : <a href="https://www.altium.com/documentation/18.0/display/ADES/Altium+Designer+-+((System+Requirements)" target="_blank">https://www.altium.com/documentation/18.0/display/ADES/Altium+Designer+-+((System+Requirements)</a>)</p>
+
+<p>run &gt; dxdiag &gt; display tab :</p>
+
+<p>main driver : VBoxDispD3D.dll v 5.2.12.0
+feature levels 9_3 9_2 9_1</p>
+
+<p>source : <a href="https://community.esri.com/thread/187265-how-to-check-directx-feature-level" target="_blank">https://community.esri.com/thread/187265-how-to-check-directx-feature-level</a></p>
+
+<p>DirectDraw Acceleration : Enabled
+Direct3D Acceleration : Enabled
+AGP Texture Acceleration : Not Available</p>
+
+<p>same dxdiag in vmware (working altium 18) :</p>
+
+<p>feature levels 10_0 9_3 9_2 9_1
+DirectDraw Acceleration : Enabled
+Direct3D Acceleration : Enabled
+AGP Texture Acceleration : Enabled</p>
+
+<p>Virtualbox does not support DX10 features :</p>
+
+<blockquote>
+<p>it appears that the 2D and 3D options in the [VirtualBox] settings enable genuine hardware acceleration for pre-10 versions of DirectX and without those options a DX8 or DX9 application gets told that there is no decent hardware.
+By contrast, a DX10 or DX11 application is always promised hardware support [DX11 &ldquo;declared&rdquo;] but never gets it.</p>
+</blockquote>
+
+<p>source : <a href="https://forums.virtualbox.org/viewtopic.php?f=2&amp;t=74964" target="_blank">https://forums.virtualbox.org/viewtopic.php?f=2&amp;t=74964</a></p>
+
+<h1 id="solidworks">solidworks</h1>
+
+<p>see solidworks offical support : <a href="http://www.solidworks.com/sw/support/11168_ENU_HTML.htm" target="_blank">http://www.solidworks.com/sw/support/11168_ENU_HTML.htm</a></p>
+
+<p>for virtualbox need to set special paramaters so solidworks doe snot see it is running inside a VM. can use antidetectvm.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='categories'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/virtual-machine'>Virtual-machine</a></div>
+<div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/vmware'>Vmware</a>, <a class='tag' href='/tags/virtualbox'>Virtualbox</a>, <a class='tag' href='/tags/altium-designer'>Altium-designer</a>, <a class='tag' href='/tags/solidworks'>Solidworks</a>, <a class='tag' href='/tags/photoshop'>Photoshop</a>, <a class='tag' href='/tags/premiere'>Premiere</a>, <a class='tag' href='/tags/after-effects'>After-effects</a>, <a class='tag' href='/tags/illutrator'>Illutrator</a>, <a class='tag' href='/tags/directx'>Directx</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/posts/seafile-webdav/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>seafile-webdav</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/posts/seafile-https-nginx-reverse-proxy/'>
+        <span class='screen-reader-text'>Next post: </span>Seafile HTTPS nginx reverse-proxy<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'>
+          <section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/monkeydri' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:monkeydri@github.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://codepen.io/monkeydri' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Codepen account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+  <line x1="12" y1="22" x2="12" y2="15.5"/>
+  <polyline points="22 8.5 12 15.5 2 8.5"/>
+  <polyline points="2 15.5 12 8.5 22 15.5"/>
+  <line x1="12" y1="2" x2="12" y2="8.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://gitlab.com/monkeydri' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Gitlab account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/monkeydri' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://t.me/monkeydri' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Telegram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="m 22.05,1.577 c -0.393,-0.016 -0.784,0.08 -1.117,0.235 -0.484,0.186 -4.92,1.902 -9.41,3.64 C 9.263,6.325 7.005,7.198 5.267,7.867 3.53,8.537 2.222,9.035 2.153,9.059 c -0.46,0.16 -1.082,0.362 -1.61,0.984 -0.79581202,1.058365 0.21077405,1.964825 1.004,2.499 1.76,0.564 3.58,1.102 5.087,1.608 0.556,1.96 1.09,3.927 1.618,5.89 0.174,0.394 0.553,0.54 0.944,0.544 l -0.002,0.02 c 0,0 0.307,0.03 0.606,-0.042 0.3,-0.07 0.677,-0.244 1.02,-0.565 0.377,-0.354 1.4,-1.36 1.98,-1.928 l 4.37,3.226 0.035,0.02 c 0,0 0.484,0.34 1.192,0.388 0.354,0.024 0.82,-0.044 1.22,-0.337 0.403,-0.294 0.67,-0.767 0.795,-1.307 0.374,-1.63 2.853,-13.427 3.276,-15.38 L 23.676,4.725 C 23.972,3.625 23.863,2.617 23.18,2.02 22.838,1.723 22.444,1.593 22.05,1.576 Z"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section>
+          <div class='copyright'>
+  <p> &copy; 2018 monkeydri </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.0d92f56c.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+

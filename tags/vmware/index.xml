@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vmware on monkeydri blog</title>
+    <link>https://monkeydri.github.io/tags/vmware/</link>
+    <description>Recent content in Vmware on monkeydri blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 May 2018 13:34:31 +0200</lastBuildDate>
+    
+	<atom:link href="https://monkeydri.github.io/tags/vmware/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Virtual Machine Compatibility</title>
+      <link>https://monkeydri.github.io/posts/virtual-machine-compatibility/</link>
+      <pubDate>Fri, 18 May 2018 13:34:31 +0200</pubDate>
+      
+      <guid>https://monkeydri.github.io/posts/virtual-machine-compatibility/</guid>
+      <description>https://www.eevblog.com/forum/altium/will-altium-17-run-in-virtualbox-or-vmware-on-a-linux-host/
+solidworks PCB keeps opening new instance rather than open PCBdoc inside : https://forum.solidworks.com/thread/28754#128290
+Vmware 3D acceleration support for intel HD graphics on ubuntu needs to add line to either ~/.vmware/preferences.ini or to the vmx fie itself :
+mks.gl.allowBlacklistedDrivers = &amp;quot;TRUE&amp;quot; source : https://ubuntuforums.org/showthread.php?t=2368057 &amp;amp; https://askubuntu.com/questions/537787/enable-3d-hw-acceleration-on-vmware-workstation-10-on-ubuntu-14-04
+altium 18 on virtualbox requires DirectX 10 :
+ This version of Altium Designer&amp;rsquo;s PCB editor has been optimized for use with DirectX 10, and requires a graphics card that supports this</description>
+    </item>
+    
+  </channel>
+</rss>
